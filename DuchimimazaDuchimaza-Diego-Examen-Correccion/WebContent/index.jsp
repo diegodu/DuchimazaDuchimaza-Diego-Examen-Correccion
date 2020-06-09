@@ -8,46 +8,32 @@
   <link rel="stylesheet" href="jsp/css/estilos.css">
 </head>
 <body>
-	<form action="agregar-ticket" method="POST">
-		<label>Cedula de Cliente: </label> 
-		<input type="text"
-			placeholder="Cedula del propietario" name="cedula"><br>
-			
-			<label>Placa de vehiculo: </label> 
-		<input type="text"
-			placeholder="Placa" name="placa"><br>
-			
-			<label>Marca de vehiculo: </label> 
-		<input type="text"
-			placeholder="Maraca" name="marca"><br>
-			
-			<label>Modelo de vehiculo: </label> 
-		<input type="text"
-			placeholder="Modelo" name="modelo"><br>
-			
-			<label>Numero de Ticket: </label> 
-		<input type="text"
-			placeholder="Numero de Ticket" name="numero"><br>
-			
-			<label>Fecha de entrada: </label> 
-		<input type="date"
-			name="fechaEntrada" placeholder="fecha de Entrada"><br>
-			
-			<label>Hora de entrada: </label> 
-		<input type="time"
-			name="horaEntrda" placeholder="hora de Entrada"><br>
-			
-			<label>Fecha de salida: </label> 
-		<input type="date"
-			name="fechaSalida" placeholder="fecha de Salida"><br>
-			
-			<label>Hora de salida: </label> 
-		<input type="time"
+<section class="form-registro">
+	<form class="ui-form" action="agregar-ticket" method="POST">
+		
+		<input type="text" class="controls"
+			placeholder="Cedula del propietario" name="cedula">
+		<input type="text" class="controls"
+			placeholder="Placa" name="placa"> 
+		<input type="text" class="controls"
+			placeholder="Maraca" name="marca">
+		<input type="text" class="controls"
+			placeholder="Modelo" name="modelo">
+		<input type="text" class="controls"
+			placeholder="Numero de Ticket" name="numero">
+		<input type="date" class="controls"
+			name="fechaEntrada" placeholder="fecha de Entrada">
+		<input type="time" class="controls"
+			name="horaEntrda" placeholder="hora de Entrada">
+		<input type="date" class="controls"
+			name="fechaSalida" placeholder="fecha de Salida">
+		<input type="time" class="controls"
 			name="horaSalida" placeholder="hora de Salida"><br>
 			
-			<input id="registrar" type="submit" value="Registrar">
+			<input class="botones" id="registrar" type="submit" value="Registrar">
 			
 	</form>
+	</section>
 
 </body>
 </html>
