@@ -41,10 +41,11 @@ table {
 
 table thead tr th {
 	margin-right: 20px;
-	color: black;
+	color: white;
 }
 
 table tbody tr th {
+	padding-top: 20px;
 	margin-right: 20px;
-	color: red;
+	color: white;
 }
