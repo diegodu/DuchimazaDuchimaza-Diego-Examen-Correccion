@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background-color: #F3DCDC;
+}
+input{
+	font-size: 20px;
+}
+table {
+	margin-left: 350px;
+	margin-top: 50px;
+	font-size: 20px;
+}
+table thead tr th{
+	margin-right: 20px;
+	color: black;
+}
+table tbody tr th{
+	margin-right: 20px;
+	color: red;
+}

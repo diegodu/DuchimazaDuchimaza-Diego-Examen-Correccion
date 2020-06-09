@@ -26,7 +26,7 @@ public class Lista extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public Lista() {
-        super();
+       
         // TODO Auto-generated constructor stub
     }
 
@@ -34,8 +34,10 @@ public class Lista extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 String cedula = request.getParameter("cedula");
+		System.out.println("ggddg"); 
+		String cedula = request.getParameter("cedula");
 		 String placa = request.getParameter("placa");
+		 System.out.println("eee");
 		 if(cedula != null && placa !=null) {
 		 System.out.println("5555");
 		 ClienteDAO clienteDao = DAOFactory.getDAOFactory().getClienteDAO();

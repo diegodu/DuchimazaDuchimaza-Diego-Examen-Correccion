@@ -5,9 +5,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Lista tickets</title>
+  <link rel="stylesheet" href="/DuchimimazaDuchimaza-Diego-Examen-Correccion/jsp/css/estilos-lista.css">
 </head>
 <body>
-	<form action="lista">
+	<form action="/DuchimimazaDuchimaza-Diego-Examen-Correccion/lista">
 		<input style="border-radius: 6px" type="text" name="cedula"
 			placeholder="cedula" id="buscar"> <input
 			style="border-radius: 6px" type="text" name="placa"
