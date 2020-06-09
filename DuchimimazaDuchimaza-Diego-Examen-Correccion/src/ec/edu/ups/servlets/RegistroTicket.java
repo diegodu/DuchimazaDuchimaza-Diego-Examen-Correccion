@@ -64,7 +64,7 @@ public class RegistroTicket extends HttpServlet {
 			VehiculoDAO vehiculoDao = DAOFactory.getDAOFactory().getVehiculoDAO();
 			vehiculoDao.create(vehiculo);
 			cliDao.update(cliente);
-			
+		
 			response.sendRedirect("lista");
 		}
 		

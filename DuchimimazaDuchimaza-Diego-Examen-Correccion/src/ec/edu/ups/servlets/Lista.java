@@ -11,7 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import ec.edu.ups.dao.ClienteDAO;
 import ec.edu.ups.dao.DAOFactory;
+import ec.edu.ups.dao.VehiculoDAO;
 import ec.edu.ups.modelo.Cliente;
+import ec.ups.edu.dao.PersonaDAO;
+import ec.ups.edu.modelo.Persona;
 
 /**
  * Servlet implementation class Lista
@@ -32,12 +35,18 @@ public class Lista extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		 String cedula = request.getParameter("cedula");
+		 String placa = request.getParameter("placa");
 		ClienteDAO clienteDao = DAOFactory.getDAOFactory().getClienteDAO();
 		List<Cliente> clientes = clienteDao.find();
+		 
+        VehiculoDAO vehiculoDao = DAOFactory.getDAOFactory().getVehiculoDAO()
+        List<Vehiculo> vehiculos = vehiculoDao.findBycedulaOrPlaca(cedula, placa);
 		
 		
-		request.setAttribute("clientes", clientes);
-		getServletContext().getRequestDispatcher("/jsp/ListarTickets.jsp").forward(request, response);
+		request.setAttribute("vehiculos", vehiculos);
+		System.out.println("hola");
+		getServletContext().getRequestDispatcher("/jsp/ListaTickets.jsp").forward(request, response);
 	}
 
 	/**
