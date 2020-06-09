@@ -1,26 +1,50 @@
 @charset "ISO-8859-1";
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
 
-    background-color: #F3DCDC;
+{
+margin
+:
+ 
+0;
+padding
+:
+ 
+0;
+box-sizing
+:
+ 
+border-box
+;
+
+
 }
-input{
+body {
+	background: #0f0c29; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, hsla(240, 28%, 19%, 0.637),
+		hsla(244, 38%, 28%, 0.514)), url(../imagenes/portada.jpg);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, hsla(240, 28%, 19%, 0.637),
+		hsla(244, 38%, 28%, 0.514)), url(../imagenes/portada.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+}
+
+input {
 	font-size: 20px;
 }
+
 table {
 	margin-left: 350px;
 	margin-top: 50px;
 	font-size: 20px;
 }
-table thead tr th{
+
+table thead tr th {
 	margin-right: 20px;
 	color: black;
 }
-table tbody tr th{
+
+table tbody tr th {
 	margin-right: 20px;
 	color: red;
 }
