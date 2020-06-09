@@ -5,12 +5,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Registro de Tickets</title>
+  <link rel="stylesheet" href="jsp/css/estilos.css">
 </head>
 <body>
 	<form action="agregar-ticket" method="POST">
 		<label>Cedula de Cliente: </label> 
 		<input type="text"
-			placeholder="Cedula" name="cedula"><br>
+			placeholder="Cedula del propietario" name="cedula"><br>
 			
 			<label>Placa de vehiculo: </label> 
 		<input type="text"
@@ -26,25 +27,25 @@
 			
 			<label>Numero de Ticket: </label> 
 		<input type="text"
-			placeholder="Numero" name="numero"><br>
+			placeholder="Numero de Ticket" name="numero"><br>
 			
 			<label>Fecha de entrada: </label> 
 		<input type="date"
-			name="fechaEntrada"><br>
+			name="fechaEntrada" placeholder="fecha de Entrada"><br>
 			
 			<label>Hora de entrada: </label> 
 		<input type="time"
-			name="horaEntrda"><br>
+			name="horaEntrda" placeholder="hora de Entrada"><br>
 			
 			<label>Fecha de salida: </label> 
 		<input type="date"
-			name="fechaSalida"><br>
+			name="fechaSalida" placeholder="fecha de Salida"><br>
 			
 			<label>Hora de salida: </label> 
 		<input type="time"
-			name="horaSalida"><br>
+			name="horaSalida" placeholder="hora de Salida"><br>
 			
-			<input type="submit" value="Enviar">
+			<input id="registrar" type="submit" value="Registrar">
 			
 	</form>
 

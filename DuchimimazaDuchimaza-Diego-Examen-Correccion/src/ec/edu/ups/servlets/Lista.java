@@ -13,8 +13,7 @@ import ec.edu.ups.dao.ClienteDAO;
 import ec.edu.ups.dao.DAOFactory;
 import ec.edu.ups.dao.VehiculoDAO;
 import ec.edu.ups.modelo.Cliente;
-import ec.ups.edu.dao.PersonaDAO;
-import ec.ups.edu.modelo.Persona;
+import ec.edu.ups.modelo.Vehiculo;
 
 /**
  * Servlet implementation class Lista
@@ -37,16 +36,22 @@ public class Lista extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 String cedula = request.getParameter("cedula");
 		 String placa = request.getParameter("placa");
-		ClienteDAO clienteDao = DAOFactory.getDAOFactory().getClienteDAO();
-		List<Cliente> clientes = clienteDao.find();
+		 if(cedula != null && placa !=null) {
+		 System.out.println("5555");
+		 ClienteDAO clienteDao = DAOFactory.getDAOFactory().getClienteDAO();
+	
+		 Cliente cliente = clienteDao.findById(cedula);
+		
+		 VehiculoDAO vehiculoDao = DAOFactory.getDAOFactory().getVehiculoDAO();
+		 List<Vehiculo> vehiculos = vehiculoDao.findBycedulaOrPlaca(cedula, placa);
+	
+		 cliente.setVehiculos(vehiculos);
+		 request.setAttribute("clientes", cliente);
+		 System.out.println("hola");
+		 }
+		 getServletContext().getRequestDispatcher("/jsp/ListaTickets.jsp").forward(request, response);
 		 
-        VehiculoDAO vehiculoDao = DAOFactory.getDAOFactory().getVehiculoDAO()
-        List<Vehiculo> vehiculos = vehiculoDao.findBycedulaOrPlaca(cedula, placa);
 		
-		
-		request.setAttribute("vehiculos", vehiculos);
-		System.out.println("hola");
-		getServletContext().getRequestDispatcher("/jsp/ListaTickets.jsp").forward(request, response);
 	}
 
 	/**
